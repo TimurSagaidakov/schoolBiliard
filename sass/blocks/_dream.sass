@@ -1,0 +1,49 @@
+.dream
+    position: relative
+    margin-top: 400px
+    display: flex
+    justify-content: center
+    align-items: center  
+    &-text
+        display: flex
+        flex-direction: column
+        margin-left: 40px
+        &-list
+            list-style: none
+            li
+                margin-bottom: 10px
+                display: flex
+                align-items: center
+                +regular
+                &::before
+                    content: ''
+                    display: block
+                    width: 8px
+                    height: 8px
+                    border-radius: 8px
+                    background-color: #D20514
+                    margin-right: 5px
+    &-arrow
+        position: absolute  
+        top: 14px
+        z-index: -1    
+    &-gradient
+        position: absolute  
+        top: 320px
+        right: 350px
+@media (max-width: 900px)
+    .dream
+        margin-top: 100px
+        flex-direction: column
+        &-img
+            width: 100%
+        &-text
+            margin-top: 40px
+            justify-content: center
+            align-items: center
+        &-arrow
+            display: none
+        &-gradient
+            display: none
+    
+            

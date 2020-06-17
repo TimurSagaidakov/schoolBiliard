@@ -1,0 +1,33 @@
+@font-face {
+    font-family: 'Heading Pro';
+    src: local('../fonts/Heading Pro Regular'), local('Heading-Pro-Regular'),
+        url('../fonts/HeadingPro-Regular.woff2') format('woff2'),
+        url('../fonts/HeadingPro-Regular.woff') format('woff'),
+        url('../fonts/HeadingPro-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Effra';
+    src: local('../fonts/Effra Regular'), local('Effra-Regular'),
+        url('../fonts/Effra.woff2') format('woff2'),
+        url('../fonts/Effra.woff') format('woff'),
+        url('../fonts/Effra.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+  @mixin heading {
+    font-family: 'Heading Pro';
+    font-weight: 800;
+    font-style: normal;
+    font-size: 45px;
+  }
+
+  @mixin regular {
+    font-family: 'Effra';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+  }
+
+  

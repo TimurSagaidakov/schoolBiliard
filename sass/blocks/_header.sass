@@ -1,0 +1,135 @@
+.navbar
+    display: flex
+    position: relative
+    margin-top: 40px
+    justify-content: space-between
+    max-width: 1100px
+    z-index: 999
+    align-items: center
+    &-menu
+        display: flex
+        justify-content: space-around
+        width: 500px
+        a
+            text-decoration: none
+            font-size: 14px
+            color: $text-color
+.title
+    margin-top: 100px
+    &-img
+        position: relative
+        top: -50px
+        height: 357px
+        &__line
+            display: block
+            position: absolute
+            top: 50%
+            left: 0
+            z-index: 2
+        &__photo
+            position: absolute
+            top: 0
+            left: 132px
+            z-index: -4
+        &__title
+            position: absolute
+            top: 0
+            left: 42%
+            z-index: -2
+        &__kii
+            position: absolute
+            top: -190px
+            right: 494px
+            z-index: -1
+        &__traectoria
+            position: absolute
+            top: -165px
+            right: 73px
+        &__ball
+            position: absolute
+            top: -17px
+            right: 30px
+        &__arrow
+            position: absolute
+            top: 269px
+            left: 154px
+    &__button
+        margin-top: 85px
+        display: flex
+        justify-content: center
+.header
+    &-gradient
+        &__lg
+            position: absolute
+            top: 41px
+            right: 0
+            z-index: -1
+        &__sm
+            position: absolute
+            top: 0
+            left: 0
+    &-ellipse
+        position: relative
+        top: -102px
+        right: 241px
+        z-index: -2
+        &__lg
+            position: absolute
+            top: 0
+            right: 0
+        &__sm
+            position: absolute
+            top: 185px
+            right: 215px
+@media (max-width: 1440px)
+    .header
+        &-ellipse
+            top: -102px
+            right: 20px
+@media (max-width: 1100px)
+    .title
+        &-img
+            &__line
+                display: none
+            &__photo
+                left: 20px
+            &__title
+                
+            &__kii
+                display: none
+
+            &__traectoria
+                display: none
+
+            &__ball
+                display: none
+
+            &__arrow
+                display: none
+    .header
+        &-ellipse
+            display: none
+@media (max-width: 900px)
+    .title
+        &-img
+            &__title
+                left: 2%
+                top: 42px
+            &__photo
+                width: 100%
+@media (max-width: 768px)
+    .navbar
+        &-menu
+            display: none
+    .header
+        &-gradient
+            &__sm, &__lg
+                display: none
+    .title-img__title
+        width: 100%
+
+                
+    
+    
+        
+
