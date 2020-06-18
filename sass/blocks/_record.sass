@@ -1,0 +1,39 @@
+.record
+    position: relative
+    margin-top: 360px
+    h2
+        text-align: center
+        margin-bottom: 46px
+    &-input
+        width: 80%
+        margin: auto
+        display: flex
+        justify-content: space-between
+    &__input
+        flex-basis: 32%
+    &-contacts
+        max-width: 800px
+        margin: auto
+        margin-top: 65px
+        display: flex
+        justify-content: space-between
+        align-items: center
+        &__email
+            +regular
+    &-bg
+        &__first
+            position: absolute
+            top: -400px
+            left: 63px
+            z-index: -1
+            mix-blend-mode: color-burn
+        &__second
+            position: absolute
+            top: -700px
+            left: -220px
+            z-index: -3
+        &__third
+            position: absolute
+            top: -400px
+            left: 63px
+            z-index: -2

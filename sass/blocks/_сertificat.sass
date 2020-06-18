@@ -1,0 +1,52 @@
+.certificat
+    position: relative
+    margin: auto
+    margin-top: 345px
+    &__gradient
+        position: absolute
+        top: -273px
+        left: 80px
+    &__face
+        position: absolute
+        height: 187px
+        top: 125px
+        right: 140px
+        z-index: 2
+        box-shadow: 9px 12px 20px rgba(50, 50, 50, 0.6)
+    &__back
+        position: absolute
+        height: 187px
+        top: 26px
+        right: 0
+        box-shadow: 9px 12px 20px rgba(50, 50, 50, 0.6)
+    &-block
+        max-width: 415px
+        box-sizing: border-box
+        &__input
+            outline: none
+            box-sizing: border-box
+            width: 100%
+            display: block
+            margin: 16px 0
+            background-color: transparent
+        &-footer
+            display: flex
+            align-items: center
+            justify-content: space-around
+        &__description
+            margin-top: 8px
+            +regular
+        &__price
+            +regular
+            font-weight: bold
+    &-arrow
+        &__school
+            position: absolute
+            top: -617px
+            right: 32%
+            z-index: -1
+        &__reviews
+            position: absolute
+            top: 150px
+            left: 31%
+            z-index: -1

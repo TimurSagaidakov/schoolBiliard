@@ -1,0 +1,39 @@
+.training
+    margin-top: 360px
+    position: relative
+    text-align: center
+    h2
+        margin-bottom: 26px
+    &__tick
+        position: absolute
+        top: -240px
+        left: 17%
+    &__photo
+        position: absolute
+        top: -361px
+        right: -15%
+    &-blocks
+        display: flex
+    &-block
+        display: flex
+        height: 500px
+        flex-direction: column
+        align-items: center
+        justify-content: flex-end
+        flex-basis: 10% 
+        &__title
+            +regular
+        &__text
+            +regular
+            font-size: 14px
+            line-height: 17px
+            margin: 10px 40px
+            width: 307px
+            flex-basis: 35%
+            align-self: center
+        &__price
+            +regular
+    &__arrow
+        position: absolute
+        top: 4%
+        left: -2%

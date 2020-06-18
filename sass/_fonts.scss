@@ -16,18 +16,37 @@
     font-weight: 400;
     font-style: normal;
   }
+    @font-face {
+      font-family: 'Point';
+      src: local('../fonts/Point  Regular'), local('Point--Regular'),
+          url('../fonts/Point-Regular.woff2') format('woff2'),
+          url('../fonts/Point-Regular.woff') format('woff'),
+          url('../fonts/Point-Regular.ttf') format('truetype');
+      font-weight: 400;
+      font-style: normal;
+    }
+  
   @mixin heading {
     font-family: 'Heading Pro';
     font-weight: 800;
     font-style: normal;
     font-size: 45px;
+    color: $text-color
   }
 
-  @mixin regular {
-    font-family: 'Effra';
+  @mixin button {
+    font-family: 'Point';
     font-weight: 400;
     font-style: normal;
     font-size: 20px;
+    color: #FEFFC8;
+  }
+  @mixin regular{
+    font-family: 'Point';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    color: $text-color;
   }
 
   

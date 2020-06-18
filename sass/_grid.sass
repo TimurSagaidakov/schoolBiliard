@@ -1,3 +1,7 @@
+*
+    box-sizing: border-box
+body
+    background: #F9F9F9
 h2
     margin: 0
 ul
@@ -15,11 +19,21 @@ ul
     border-radius: 53px
     font-size: 20px
     line-height: 24px
-    +regular
+    +button
     box-shadow: 0px 23px 27px rgba(255, 3, 3, 0.45), 0px 10px 12px rgba(255, 4, 4, 0.47)
     outline: none
     &:active
         box-shadow: none
+.input
+    border: 2px solid #DE0A1E
+    border-radius: 6px
+    +regular
+    font-weight: 500
+    font-size: 14px
+    line-height: 17px
+    color: #585858
+    padding: 17px 29px
+    background-color: transparent
 .section
     &-title
     &__title
