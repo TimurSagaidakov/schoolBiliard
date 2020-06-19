@@ -179,6 +179,7 @@ ul {
   position: absolute;
   top: 269px;
   left: 154px;
+  z-index: -5;
 }
 
 .title__button {
@@ -667,7 +668,7 @@ ul {
 
 .youtube__arrow {
   position: absolute;
-  top: -30px;
+  top: -90px;
   left: 190px;
   z-index: -1;
 }
@@ -740,10 +741,14 @@ ul {
   color: #323232;
 }
 
+.record-contacts__button {
+  margin-left: 127px;
+}
+
 .record-bg__first {
   position: absolute;
   top: -400px;
-  left: 63px;
+  left: 75px;
   z-index: -1;
   mix-blend-mode: color-burn;
 }
@@ -751,14 +756,14 @@ ul {
 .record-bg__second {
   position: absolute;
   top: -700px;
-  left: -220px;
+  left: -208px;
   z-index: -3;
 }
 
 .record-bg__third {
   position: absolute;
   top: -400px;
-  left: 63px;
+  left: 75px;
   z-index: -2;
 }
 
