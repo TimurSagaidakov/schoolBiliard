@@ -57,6 +57,11 @@ ul {
   color: #FEFFC8;
   box-shadow: 0px 23px 27px rgba(255, 3, 3, 0.45), 0px 10px 12px rgba(255, 4, 4, 0.47);
   outline: none;
+  text-decoration: none;
+}
+
+.button:focus {
+  cursor: pointer;
 }
 
 .button:active {
@@ -90,6 +95,13 @@ ul {
   color: #323232;
 }
 
+.arrow__navigation {
+  position: fixed;
+  top: 90%;
+  left: 2%;
+  z-index: 999;
+}
+
 .navbar {
   display: flex;
   position: relative;
@@ -103,7 +115,7 @@ ul {
 .navbar-menu {
   display: flex;
   justify-content: space-around;
-  width: 500px;
+  flex-basis: 66%;
 }
 
 .navbar-menu a {
@@ -632,6 +644,10 @@ ul {
   border: none;
   outline: none;
   position: absolute;
+}
+
+.arrow:hover {
+  cursor: pointer;
 }
 
 .youtube {

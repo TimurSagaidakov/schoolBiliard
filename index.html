@@ -9,21 +9,25 @@
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 </head>
 <body>
+    <a href="#header"><img src="/img/billiard (2).png" class="arrow__navigation" alt=""></a>
     <header>
+        
         <div class="container">
-            <div class="navbar">
+            
+            <div class="navbar" id="header">
             <div class="navbar-logo">
                 <img src="/img/logo@4x 1.png" alt="" class="navbar-logo__img">
             </div>
             <!-- /.navbar-logo -->
             <div class="navbar-menu">
-                <a href="#" class="navbar-menu__text">Услуги</a>
+                <a href="#training" class="navbar-menu__text">Форматы тренировок</a>
                 <!-- /.navbar-menu__text -->
-                <a href="#" class="navbar-menu__text">Сертификат</a>
+                <a href="#school" class="navbar-menu__text">Детская школа</a>
+                <a href="#certificat" class="navbar-menu__text">Сертификат</a>
                 <!-- /.navbar-menu__text -->
-                <a href="#" class="navbar-menu__text">Отзывы</a>
+                <a href="#reviews" class="navbar-menu__text">Отзывы</a>
                 <!-- /.navbar-menu__text -->
-                <a href="#" class="navbar-menu__text">Контакты</a>
+                <a href="#contacts" class="navbar-menu__text">Контакты</a>
                 <!-- /.navbar-menu__text -->
                 <a href="tel:+7 911 751-78-42 " class="navbar-menu__text">+7 911 751-78-42 </a>
                 <!-- /.navbar-menu__text -->
@@ -42,7 +46,7 @@
             <img src="/img/стрелка.png" class="title-img__arrow" alt="">
             </div>
             <div class="title__button">
-                <button class="button button-primary">Записаться</button>
+                <a href="#record" class="button button-primary">Записаться</a>
             </div>
             </div>
         </div>
@@ -55,7 +59,7 @@
         </div>
     </header>
     <section class="dream">
-        <img src="/img/dream.png" class="dream-img" alt="">
+        <img src="/img/Элементы.png" class="dream-img" alt="">
         <div class="dream-text">
         <h2 class="section-title section__title">
             На пути к мечте
@@ -93,7 +97,7 @@
             </div>
         </div>
     </section>
-    <section class="training">        
+    <section class="training" id="training">        
         <div class="container">
         <img src="/img/галка.png" alt="" class="training__tick">
         <img src="/img/Mask Group.png" alt="" class="training__photo">
@@ -138,7 +142,7 @@
         <!-- /.training-blocks -->
         
     </section>
-    <section class="school">
+    <section class="school" id="school">
         <div class="container">
             <div class="school">
                 <img src="img/Mask Group (1).png" alt="" class="school-block__img1"> 
@@ -150,14 +154,14 @@
                 </div>              
             </div>
             <div class="title__button">
-                <button class="button button-primary">Записаться</button>
+                <a href="#record" class="button button-primary">Записаться</a>
             </div>
             
         </div>
         
         <img src="/img/зерно 2 10.png" alt="" class="school-grad">
     </section>
-    <section class="certificat">
+    <section class="certificat" id="certificat">
         <img src="/img/зерно 2 9.png" alt="" class="certificat__gradient">
         <img src="/img/стрелка4.png" alt=""class="certificat-arrow__school">
         <img src="/img/стрелка5.png" alt=""class="certificat-arrow__reviews">
@@ -165,12 +169,14 @@
             <div class="certificat-block">
                 <h2 class="section-title section__title">Подарочный сертификат</h2>
                 <div class="certificat-block__description">Актуальный и креативный подарок не оставит равнодушным никого.</div>
-                    <input type="text" class="input certificat-block__input" placeholder="Ваше имя">
-                    <input type="text" class="input certificat-block__input" placeholder="Телефон">
-                    <input type="text" class="input certificat-block__input" placeholder="Кол-во тренировок">
+                    <form action="send.php" method="POST">
+                <input type="text" class="input certificat-block__input" name="user_name" placeholder="Ваше имя">
+                    <input type="text" class="input certificat-block__input" name="user_phone" placeholder="Телефон">
+                    <input type="text" class="input certificat-block__input" name="user_training" placeholder="Кол-во тренировок">
                 <div class="certificat-block-footer">
-                    <button class="button certificat-block__button">Заказать</button>
+                    <input type="submit" class="button certificat-block__button" value="Заказать">
                 <div class="certificat-block__price">Cтоимость: <br>от 2 500₽</div>
+            </form>
                 </div>
             </div>
             <div class="certificat__face">
@@ -181,7 +187,7 @@
             </div> 
         </div>
     </section>
-    <section class="reviews">
+    <section class="reviews" id="reviews">
         <img src="/img/зерно 2 9 (1).png" alt="" class="reviews-grad__lg">
         <div class="container">
             <h2 class="section-title section__title">Отзывы</h2>
@@ -253,16 +259,17 @@
             </div>
         </div>
     </section>
-    <section class="record">
+    <section class="record" id="record">
         <div class="container">
             <img src="/img/зерно 2 11record.png" class="record-bg__first" alt="">
             <img src="/img/Ellipse 63record (1).png" class="record-bg__second" alt="">
             <img src="/img/Ellipse 64record (1).png" class="record-bg__third" alt="">
             <h2 class="section-title section__title">Записаться на тренировку</h2>
             <div class="record-input">
-                <input type="text" name="fio" class="input record__input" placeholder="Ваше имя"></input>
-                <input type="text" name="tel" class="input record__input" placeholder="Телефон"></input>
-                <input type="text" name="email" class="input record__input" placeholder="Email"></input>
+                <form action="send.php" method="POST">
+                <input type="text" name="user_name" class="input record__input" placeholder="Ваше имя">
+                <input type="text" name="user_phone" class="input record__input" placeholder="Телефон">
+                <input type="text" name="user_email" class="input record__input" placeholder="Email">
                 
             </div>
             <div class="record-contacts">
@@ -276,13 +283,13 @@
                     <path d="M42.2184 36.3906C41.9596 37.8339 40.7263 38.8849 39.2951 39.213C37.1533 39.6719 33.1896 40 28.901 40C24.615 40 20.5878 39.6719 18.4435 39.213C17.0149 38.8849 15.779 37.9005 15.5202 36.3906C15.2588 34.75 15 32.4531 15 29.5C15 26.5469 15.2588 24.25 15.5837 22.6094C15.845 21.1661 17.0783 20.1151 18.507 19.787C20.7807 19.3281 24.6784 19 28.967 19C33.2556 19 37.1533 19.3281 39.427 19.787C40.8557 20.1151 42.089 21.0995 42.3504 22.6094C42.6092 24.25 42.934 26.6135 43 29.5C42.868 32.4531 42.5432 34.75 42.2184 36.3906ZM25.3941 24.9062V34.0938L33.319 29.5L25.3941 24.9062Z" fill="#F9F9F9"/>
                     </svg>
                 </a>
-                <button class="button">Записаться </button>
-
+                <input type="submit" class="button" value="Записаться">
+            </form>
                 <div class="record-contacts__email">stas.sokolov.1995@mail.ru</div>
             </div>
         </div>
     </section>
-    <footer class="footer">
+    <footer class="footer" id="contacts">
         <div class="container">
             <ul class="footer-address">
                 <li>PlayPOOL - Проспект Культуры, д.41</li>

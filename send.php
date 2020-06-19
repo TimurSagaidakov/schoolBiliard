@@ -1,28 +1,37 @@
-<?php
+<?php 
 
-if(isset($_POST['submit'])){
-$to = "info@epicblog.net";; // Здесь нужно написать e-mail, куда будут приходить письма
-$from = $_POST['email']; // this is the sender's Email address
-$first_name = $_POST['first_name'];
-$subject = "Форма отправки сообщений с сайта";
-$subject2 = "Copy of your form submission";
-$message = $first_name . " оставил сообщение:" . "\n\n" . $_POST['message'];
-$message2 = "Here is a copy of your message " . $first_name . "\n\n" . $_POST['message'];
+require_once('phpmailer/PHPMailerAutoload.php');
+$mail = new PHPMailer;
+$mail->CharSet = 'utf-8';
 
-$headers = "From:" . $from;
-$headers2 = "From:" . $to;
+$name = $_POST['user_name'];
+$phone = $_POST['user_phone'];
+$training = $_POST['user_training'];
+$email = $_POST['user_email'];
 
-mail($to,$subject,$message,$headers);
-// mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender - Отключено!
-echo "Сообщение отправлено. Спасибо Вам " . $first_name . ", мы скоро свяжемся с Вами.";
-echo "<br /><br /><a href='https://epicblog.net'>Вернуться на сайт.</a>";
 
+//$mail->SMTPDebug = 3;                               // Enable verbose debug output
+
+$mail->isSMTP();                                      // Set mailer to use SMTP
+$mail->Host = 'smtp.mail.ru';  																							// Specify main and backup SMTP servers
+$mail->SMTPAuth = true;                               // Enable SMTP authentication
+$mail->Username = 'timurvladimirovich90@mail.ru'; // Ваш логин от почты с которой будут отправляться письма
+$mail->Password = '1t2i3m4a'; // Ваш пароль от почты с которой будут отправляться письма
+$mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
+$mail->Port = 465; // TCP port to connect to / этот порт может отличаться у других провайдеров
+
+$mail->setFrom('timurvladimirovich90@mail.ru'); // от кого будет уходить письмо?
+$mail->addAddress('timurvladimirovich90@gmail.com');     // Кому будет уходить письмо 
+
+$mail->isHTML(true);                                  // Set email format to HTML
+
+$mail->Subject = 'Заявка с вашего сайта';
+$mail->Body    = '' .$name . ' оставил заявку, его телефон ' .$phone. '<br>Количество тренировок, которое хочет клиент: ' .$training. '<br>Электронный адрес клиента: ' .$email;
+$mail->AltBody = '';
+
+if(!$mail->send()) {
+    echo 'Error';
+} else {
+    header('location: thank-you.html');
 }
-
 ?>
-
-<!--Переадресация на главную страницу сайта, через 3 секунды-->
-<script language="JavaScript" type="text/javascript">
-function changeurl(){eval(self.location="https://epicblog.net/index.php");}
-window.setTimeout("changeurl();",3000);
-</script>
